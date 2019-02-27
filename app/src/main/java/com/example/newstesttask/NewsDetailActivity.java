@@ -66,12 +66,12 @@ public class NewsDetailActivity extends AppCompatActivity implements AppBarLayou
         title = findViewById(R.id.title);
 
         Intent intent = getIntent();
-        mUrl = intent.getStringExtra("url");
-        mImg = intent.getStringExtra("img");
-        mTitle = intent.getStringExtra("title");
-        mDate = intent.getStringExtra("date");
-        mSource = intent.getStringExtra("source");
-        mAuthor = intent.getStringExtra("author");
+        mUrl = intent.getStringExtra(Constants.url);
+        mImg = intent.getStringExtra(Constants.img);
+        mTitle = intent.getStringExtra(Constants.title);
+        mDate = intent.getStringExtra(Constants.date);
+        mSource = intent.getStringExtra(Constants.source);
+        mAuthor = intent.getStringExtra(Constants.author);
 
         RequestOptions requestOptions = new RequestOptions();
         requestOptions.error(Utils.getRandomDrawbleColor());

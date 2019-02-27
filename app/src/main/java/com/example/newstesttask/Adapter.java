@@ -45,7 +45,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder>{
         return new MyViewHolder(view, onItemClickListener);
     }
 
-    @SuppressLint({"CheckResult", "SetTextI18n"})
+    @SuppressLint({"CheckResult", "Set TextI18n"})
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holders, int position) {
         final MyViewHolder holder = holders;

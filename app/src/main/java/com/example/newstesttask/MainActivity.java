@@ -175,16 +175,15 @@ public class MainActivity extends AppCompatActivity implements  SwipeRefreshLayo
 
                 Article article = articles.get(position);
                 intent.putExtra((Constants.url), article.getUrl());
-                intent.putExtra((Constants.title), article.getUrl());
-                intent.putExtra((Constants.img), article.getUrl());
-                intent.putExtra((Constants.date), article.getUrl());
-                intent.putExtra((Constants.source), article.getUrl());
-                intent.putExtra((Constants.author), article.getUrl());
+                intent.putExtra((Constants.title), article.getTitle());
+                intent.putExtra((Constants.img), article.getUrlToImage());
+                intent.putExtra((Constants.date), article.getPublishedAt());
+                intent.putExtra((Constants.source), article.getSource().getName());
+                intent.putExtra((Constants.author), article.getAuthor());
+
+
 
                 Pair<View, String> pair = Pair.create((View)imageView, ViewCompat.getTransitionName(imageView));
-
-
-
                 ActivityOptionsCompat.makeSceneTransitionAnimation(
                         MainActivity.this,
                         pair

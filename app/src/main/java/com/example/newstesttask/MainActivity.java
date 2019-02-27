@@ -37,6 +37,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+
+
 public class MainActivity extends AppCompatActivity implements  SwipeRefreshLayout.OnRefreshListener{
 
     public static final String API_KEY = "3b85f89cef4943a1a38d7ab2707ceb9b";
@@ -163,21 +165,26 @@ public class MainActivity extends AppCompatActivity implements  SwipeRefreshLayo
     private void initListener(){
 
         adapter.setOnItemClickListener(new Adapter.OnItemClickListener() {
+
+
             @Override
             public void onItemClick(View view, int position) {
                 ImageView imageView = view.findViewById(R.id.img);
                 Intent intent = new Intent(MainActivity.this, NewsDetailActivity.class);
 
+
                 Article article = articles.get(position);
-                intent.putExtra("url", article.getUrl());
-                intent.putExtra("title", article.getTitle());
-                intent.putExtra("img",  article.getUrlToImage());
-                intent.putExtra("date",  article.getPublishedAt());
-                intent.putExtra("source",  article.getSource().getName());
-                intent.putExtra("author",  article.getAuthor());
+                intent.putExtra((Constants.url), article.getUrl());
+                intent.putExtra((Constants.title), article.getUrl());
+                intent.putExtra((Constants.img), article.getUrl());
+                intent.putExtra((Constants.date), article.getUrl());
+                intent.putExtra((Constants.source), article.getUrl());
+                intent.putExtra((Constants.author), article.getUrl());
 
                 Pair<View, String> pair = Pair.create((View)imageView, ViewCompat.getTransitionName(imageView));
-                //noinspection unchecked
+
+
+
                 ActivityOptionsCompat.makeSceneTransitionAnimation(
                         MainActivity.this,
                         pair

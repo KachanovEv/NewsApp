@@ -49,7 +49,8 @@
                     android:src="@drawable/top_shadow"
                     android:scaleType="centerCrop"
                     android:layout_width="match_parent"
-                    android:layout_height="70dp" />
+                    android:layout_height="70dp"
+                    android:contentDescription="@string/todo_top_shadow_ImageView" />
 
                 <ImageView
                     android:layout_alignParentBottom="true"
@@ -58,7 +59,8 @@
                     android:layout_alignBottom="@id/img"
                     android:scaleType="centerCrop"
                     android:layout_width="match_parent"
-                    android:layout_height="80dp" />
+                    android:layout_height="80dp"
+                    android:contentDescription="@string/todo_bottom_shadow_ImageView" />
 
             </RelativeLayout>
 
@@ -83,8 +85,8 @@
                     <TextView
                         android:id="@+id/title_on_appbar"
                         style="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Title"
-                        android:text="News for you"
-                        android:textSize="18dp"
+                        android:text="@string/news_for_youTextVIew"
+                        android:textSize="18sp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:maxLines="1"
@@ -95,8 +97,8 @@
                     <TextView
                         android:id="@+id/subtitle_on_appbar"
                         style="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
-                        android:text="Subtitle"
-                        android:textSize="12dp"
+                        android:text="@string/subtitleTextView"
+                        android:textSize="12sp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:maxLines="1"
@@ -128,7 +130,8 @@
                 android:layout_width="match_parent"
                 app:cardCornerRadius="0dp"
                 app:cardElevation="@dimen/cardview_default_elevation"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                tools:ignore="PrivateResource">
                 <RelativeLayout
                     android:layout_marginBottom="20dp"
                     android:layout_marginTop="20dp"
@@ -142,7 +145,7 @@
                         android:textStyle="bold"
                         android:fontFamily="sans-serif-light"
                         android:textSize="19sp"
-                        android:text="Title of News"
+                        android:text="@string/title_of_news_TextView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         />
@@ -157,7 +160,7 @@
                         android:drawablePadding="10dp"
                         android:singleLine="true"
                         android:ellipsize="end"
-                        android:text="a time ago" />
+                        android:text="@string/a_time_ago_TextView" />
 
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
@@ -169,7 +172,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardElevation="@dimen/cardview_default_elevation"
-                app:cardCornerRadius="0dp">
+                app:cardCornerRadius="0dp"
+                tools:ignore="PrivateResource">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -201,7 +205,6 @@
     <FrameLayout
         android:id="@+id/date_behavior"
         app:layout_anchor="@+id/appbar"
-        app:behavior_autoHide="true"
         android:adjustViewBounds="true"
         app:layout_anchorGravity="right|end|bottom"
         android:clickable="false"
@@ -210,8 +213,8 @@
         android:layout_width="wrap_content"
         android:padding="5dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
         android:layout_marginBottom="410dp"
         android:layout_height="wrap_content"
         tools:ignore="UnusedAttribute">
@@ -220,13 +223,14 @@
             android:layout_width="18dp"
             android:layout_height="18dp"
             android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"/>
+            android:layout_marginRight="5dp"
+            android:contentDescription="@string/todo_IconDate_ImageView" />
         <TextView
             android:textColor="#606060"
             android:id="@+id/date"
-            android:layout_marginLeft="27dp"
-            android:layout_marginRight="10dp"
-            android:text="01 January 1990"
+            android:layout_marginStart="27dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/january_1990_TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </FrameLayout>

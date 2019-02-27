@@ -13,7 +13,8 @@
         android:layout_marginTop="7dp"
         android:layout_marginBottom="7dp"
         app:cardElevation="@dimen/cardview_default_elevation"
-        app:cardCornerRadius="10dp">
+        app:cardCornerRadius="10dp"
+        tools:ignore="PrivateResource">
 
         <RelativeLayout
             android:background="?android:attr/selectableItemBackground"
@@ -26,14 +27,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:scaleType="centerCrop"
-                tools:ignore="UnusedAttribute" />
+                tools:ignore="UnusedAttribute"
+                android:contentDescription="@string/img_todo_ImageView" />
 
             <ImageView
                 android:id="@+id/shadow_bottom"
                 android:src="@drawable/bottom_shadow"
                 android:layout_alignBottom="@id/img"
                 android:layout_width="match_parent"
-                android:layout_height="80dp" />
+                android:layout_height="80dp"
+                android:contentDescription="@string/bottom_shadow_todo" />
 
             <ProgressBar
                 android:id="@+id/prograss_load_photo"
@@ -51,14 +54,15 @@
                 android:maxLines="1"
                 android:textColor="@android:color/white"
                 android:singleLine="true"
-                android:layout_marginRight="160dp"
-                android:text="Author"
+                android:layout_marginEnd="160dp"
+                android:text="@string/authorText"
                 android:gravity="bottom"
                 android:layout_alignLeft="@+id/title"
                 android:layout_alignStart="@+id/title"
                 android:layout_alignRight="@id/layoutDate"
                 android:layout_alignTop="@+id/layoutDate"
-                android:layout_alignEnd="@id/layoutDate"/>
+                android:layout_alignEnd="@id/layoutDate"
+                tools:ignore="RtlHardcoded" />
 
             <FrameLayout
                 android:id="@+id/layoutDate"
@@ -67,8 +71,8 @@
                 android:layout_below="@id/img"
                 android:background="@drawable/round_white"
                 android:padding="5dp"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
                 android:layout_marginTop="-50dp">
 
                 <ImageView
@@ -76,13 +80,14 @@
                     android:layout_width="18dp"
                     android:layout_height="18dp"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp" />
+                    android:layout_marginRight="5dp"
+                    android:contentDescription="@string/icDate_todo_ImageView" />
                 <TextView
                     android:textColor="#606060"
                     android:id="@+id/publishedAt"
-                    android:layout_marginLeft="27dp"
-                    android:layout_marginRight="10dp"
-                    android:text="01 January 1990"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/_01_january_1990_text_view_10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
@@ -98,7 +103,7 @@
                 android:textColor="@color/colorTextTitle"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
-                android:text="Title"
+                android:text="@string/title_textView"
                 android:textSize="17sp"
                 android:layout_marginTop="10dp"
                 android:layout_below="@id/img"
@@ -113,7 +118,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="5dp"
-                android:text="Desc"
+                android:text="@string/descTextView"
                 />
 
             <TextView
@@ -122,7 +127,7 @@
                 android:layout_height="20dp"
                 android:layout_below="@id/desc"
                 android:layout_marginTop="10dp"
-                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginBottom="10dp"
                 android:fontFamily="sans-serif-light"
                 android:textStyle="bold"
@@ -131,7 +136,7 @@
                 android:drawablePadding="10dp"
                 android:singleLine="true"
                 android:ellipsize="end"
-                android:text="Source" />
+                android:text="@string/sourceTextView" />
 
 
             <TextView
@@ -141,12 +146,12 @@
                 android:layout_below="@id/desc"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:layout_toRightOf="@id/source"
+                android:layout_toEndOf="@id/source"
                 android:maxLines="1"
                 android:drawablePadding="10dp"
                 android:singleLine="true"
                 android:ellipsize="end"
-                android:text="Time" />
+                android:text="@string/timeTextView" />
 
 
         </RelativeLayout>
